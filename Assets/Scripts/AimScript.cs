@@ -38,7 +38,7 @@ public class AimScript : MonoBehaviour
             if (ray.distance < distanceOfInteract ){
                 if (ray.collider.gameObject.CompareTag("InteractiveObject")){
                     //Esta Colidindo com o Objeto
-                    Interact();
+                    Interact(ray.collider.gameObject);
                 }
                 else {
                     //Esse objeto nao e interativo.
@@ -64,10 +64,13 @@ public class AimScript : MonoBehaviour
         }
     }
 
-    void Interact()
+    void Interact(GameObject gmbj)
     {
         intText.enabled = true;
-        Debug.Log("Hit");
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            gmbj.GetComponent<InteractiveObject>().InteractDoor();
+        }
     }
     void NotInteract()
     {
