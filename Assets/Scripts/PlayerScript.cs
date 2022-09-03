@@ -4,14 +4,19 @@ using UnityEngine;
 
 public class PlayerScript : MonoBehaviour
 {
-     public CharacterController cc;
-        public float speed;
-        public float gravity = -9.81f;
+    //Publics Var
+        public CharacterController cc;
         public Transform groundCheck;
-        public float groundDistance = 0.4f;
-        public bool isGround;
-        public float jumpHeight;
-        Vector3 velocity;
+        public int keys;
+        
+
+    //Privates Var
+        private float speed = 4;
+        private float gravity = -19.62f;
+        private float groundDistance = 0.04f;
+        private bool isGround;
+        private float jumpHeight = 2;
+        private Vector3 velocity;
         void Update()
         {
             isGround = Physics.CheckSphere(groundCheck.position,groundDistance);
