@@ -5,9 +5,8 @@ using UnityEngine;
 
 public class PlayerScript : MonoBehaviour
 {
-     public CharacterController cc;
-        public float speed;
-        public float gravity = -9.81f;
+    //Publics Var
+        public CharacterController cc;
         public Transform groundCheck;
         public float groundDistance = 0.4f;
         public bool isGround;

@@ -50,26 +50,24 @@ public class AimScript : MonoBehaviour
                 NotInteract();
                 return; }
         }
-        
-        
-        
-        
-        if (Input.GetKeyDown(KeyCode.Z))
-        {
+        if (Input.GetKeyDown(KeyCode.Z)) {
             Cursor.lockState = CursorLockMode.None;
         }
-        if (Input.GetKeyDown(KeyCode.X))
-        {
+        if (Input.GetKeyDown(KeyCode.X)) {
             Cursor.lockState = CursorLockMode.Locked;
         }
     }
-
     void Interact(GameObject gmbj)
     {
         intText.enabled = true;
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            gmbj.GetComponent<InteractiveObject>().InteractDoor();
+        if (Input.GetKeyDown(KeyCode.E)) {
+            if (gmbj.GetComponent<InteractiveObject>().isDoor){
+                gmbj.GetComponent<InteractiveObject>().InteractDoor();
+            }else if (gmbj.GetComponent<InteractiveObject>().isKey) {
+                gmbj.GetComponent<InteractiveObject>().InteractKey();
+            }else if (gmbj.GetComponent<InteractiveObject>().isLever) {
+                gmbj.GetComponent<InteractiveObject>().InteractLever();
+            }
         }
     }
     void NotInteract()
