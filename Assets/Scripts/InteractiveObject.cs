@@ -19,6 +19,15 @@ public class InteractiveObject : MonoBehaviour
             else {
                 Hjoint.useMotor = false;
             }
+            
+            if (isDoor) {
+                //PlayDoorAudio
+                FindObjectOfType<AudioManager>().Play("DoorOpening");
+            }
+            if (isLever) {
+                //PlayLeverAudio
+            }
+            
         }
         
     }
