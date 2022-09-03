@@ -29,10 +29,8 @@ public class InteractiveObject : MonoBehaviour
                 return;
             }
             else {
-                if (doorIsLocked)
-                {
-                    if (player.GetComponent<PlayerScript>().keys > 0)
-                    {
+                if (doorIsLocked) {
+                    if (player.GetComponent<PlayerScript>().keys > 0) {
                         player.GetComponent<PlayerScript>().keys -= 1;
                         if (!Hjoint.useMotor) {
                             Hjoint.useMotor = true;
@@ -41,11 +39,12 @@ public class InteractiveObject : MonoBehaviour
                             Hjoint.useMotor = false;
                         } 
                         //PlayOpen
+                        FindObjectOfType<AudioManager>().Play("DoorOpening");
                         doorIsLocked = false;
                     }
-                    else
-                    {
+                    else {
                         //PlayLocked
+                        FindObjectOfType<AudioManager>().Play("DoorLocked");
                     }
                 }
                 else {
@@ -56,6 +55,7 @@ public class InteractiveObject : MonoBehaviour
                         Hjoint.useMotor = false;
                     } 
                     //PlayOpen
+                    FindObjectOfType<AudioManager>().Play("DoorOpening");
                 }  
             }
         }
@@ -69,15 +69,8 @@ public class InteractiveObject : MonoBehaviour
             else {
                 Hjoint.useMotor = false;
             }
-            
-            if (isDoor) {
-                //PlayDoorAudio
-                FindObjectOfType<AudioManager>().Play("DoorOpening");
-            }
-            if (isLever) {
-                //PlayLeverAudio
-            }
-            
+            doorWithLever.GetComponent<InteractiveObject>().InteractLeverDoor();
+            //PlayLeverAudio
         }
     }
     public void InteractLeverDoor() {

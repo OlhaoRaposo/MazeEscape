@@ -8,21 +8,23 @@ public class PlayerScript : MonoBehaviour
     //Publics Var
         public CharacterController cc;
         public Transform groundCheck;
-        public float groundDistance = 0.4f;
-        public bool isGround;
-        public float jumpHeight;
-        Vector3 velocity;
-
+        public int keys;
+        
+        
+    //Private Var
+        private float groundDistance = 0.06f;
+        private float jumpHeight;       
+        private bool isGround;
+        private float gravity = -19.20f;
+        private float speed = 3;
         private bool isWalking;
         private bool IsCoroutineRunning = false;
         private bool isCheck;
-
+        Vector3 velocity;
         private void Start() {
             FindObjectOfType<AudioManager>().Play("StaticSound");
         }
-
-        void Update()
-        {
+        void Update() {
             isGround = Physics.CheckSphere(groundCheck.position,groundDistance);
             if (isGround && velocity.y < 0)
             {
@@ -59,15 +61,12 @@ public class PlayerScript : MonoBehaviour
                 velocity.y = Mathf.Sqrt(jumpHeight * -2 * gravity);
             }
         }
-
         void CheckSound() {
             if(!IsCoroutineRunning) {
                 StartCoroutine(WalkSound());
             }else{return;}
         }
-
-        IEnumerator WalkSound()
-        {
+        IEnumerator WalkSound() {
             IsCoroutineRunning = true;
             if (IsCoroutineRunning & isGround) {
                 FindObjectOfType<AudioManager>().Play("Walk");
