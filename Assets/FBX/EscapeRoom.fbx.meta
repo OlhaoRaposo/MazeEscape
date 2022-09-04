@@ -3,12 +3,7 @@ guid: 8dd8379604f6a83479fdd46bb84e4be8
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Backroom_Texture
-    second: {fileID: 2100000, guid: 9b02d74f533acb14993995189a96d1cf, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
