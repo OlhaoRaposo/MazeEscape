@@ -17,6 +17,7 @@ public class AimScript : MonoBehaviour
     private float distanceOfInteract = 4;
     private RaycastHit ray;
     private Vector3 rayVec;
+    
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
@@ -73,8 +74,6 @@ public class AimScript : MonoBehaviour
     void NotInteract()
     {
         intText.enabled = false;
-        Debug.Log("Esse objeto nao e interativo ou esta muito longe.");
-
     }
     
 }

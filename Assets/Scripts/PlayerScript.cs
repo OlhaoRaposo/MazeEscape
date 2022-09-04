@@ -20,6 +20,7 @@ public class PlayerScript : MonoBehaviour
         private bool isWalking;
         private bool IsCoroutineRunning = false;
         private bool isCheck;
+        private bool isRuning = false;
         Vector3 velocity;
         private void Start() {
             FindObjectOfType<AudioManager>().Play("StaticSound");
@@ -58,6 +59,19 @@ public class PlayerScript : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Space) && isGround)
             {
                 velocity.y = Mathf.Sqrt(jumpHeight * -2 * gravity);
+            }
+
+            if (Input.GetKeyDown(KeyCode.LeftShift))
+            {
+                if(!isRuning)
+                    speed += 2;
+                isRuning = true;
+            }
+            if (Input.GetKeyUp(KeyCode.LeftShift))
+            {
+                if(isRuning)
+                    speed -= 2;
+                isRuning = false;
             }
         }
         void CheckSound() {
