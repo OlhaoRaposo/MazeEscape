@@ -11,12 +11,13 @@ GameObject:
   - component: {fileID: 5098110454429708987}
   - component: {fileID: 7257761523070967300}
   - component: {fileID: 6706934455840648512}
+  - component: {fileID: 5999555908566860886}
   m_Layer: 0
   m_Name: ParededComum
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &5098110454429708987
 Transform:
@@ -83,3 +84,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &5999555908566860886
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2933224981185795601}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.0004985, y: 2.9973936, z: 0.29974598}
+  m_Center: {x: 0, y: 1.5040543, z: 0}
