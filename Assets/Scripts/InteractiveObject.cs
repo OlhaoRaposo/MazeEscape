@@ -81,6 +81,7 @@ public class InteractiveObject : MonoBehaviour
             }
             else { Hjoint.useMotor = false;
             }
+            FindObjectOfType<AudioManager>().Play("DoorOpening");
         }
     }
     public void InteractKey() {
