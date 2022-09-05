@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class AimScript : MonoBehaviour
@@ -79,6 +80,8 @@ public class AimScript : MonoBehaviour
                 gmbj.GetComponent<InteractiveObject>().InteractKey();
             }else if (gmbj.GetComponent<InteractiveObject>().isLever) {
                 gmbj.GetComponent<InteractiveObject>().InteractLever();
+            }else if (gmbj.GetComponent<InteractiveObject>().isNext) {
+                gmbj.GetComponent<InteractiveObject>().LoadNext(gmbj.name.ToString());
             }
         }
     }

@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class InteractiveObject : MonoBehaviour
 {
@@ -14,6 +15,8 @@ public class InteractiveObject : MonoBehaviour
         
     public bool isKey;
     public HingeJoint Hjoint;
+
+    public bool isNext;
     
     GameObject player;
     private void Start() {
@@ -83,6 +86,19 @@ public class InteractiveObject : MonoBehaviour
             FindObjectOfType<AudioManager>().Play("DoorOpening");
         }
     }
+
+    public void LoadNext(string a)
+    {
+        if (isNext)
+        {
+            if (a == "Win")
+            {
+                Cursor.lockState = CursorLockMode.None;
+            }
+            SceneManager.LoadScene(a);
+        }
+    }
+    
     public void InteractKey() {
         player.GetComponent<PlayerScript>().keys += 1;
         FindObjectOfType<AudioManager>().Play("Key");

@@ -163,6 +163,7 @@ MonoBehaviour:
   doorWithLever: {fileID: 0}
   isKey: 1
   Hjoint: {fileID: 0}
+  isNext: 0
 --- !u!54 &323492
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -17752,9 +17753,10 @@ GameObject:
   - component: {fileID: 864560538}
   - component: {fileID: 864560537}
   - component: {fileID: 864560536}
+  - component: {fileID: 864560540}
   m_Layer: 0
   m_Name: Level03
-  m_TagString: Next
+  m_TagString: InteractiveObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17837,6 +17839,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &864560540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 864560535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5648f217bfa779d48954d929979a305b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isDoor: 0
+  doorIsLocked: 0
+  isDorLever: 0
+  isLever: 0
+  doorWithLever: {fileID: 0}
+  isKey: 0
+  Hjoint: {fileID: 0}
+  isNext: 1
 --- !u!1001 &865252958
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26815,6 +26837,7 @@ MonoBehaviour:
   doorWithLever: {fileID: 0}
   isKey: 1
   Hjoint: {fileID: 0}
+  isNext: 0
 --- !u!54 &1250786864
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -38525,6 +38548,7 @@ MonoBehaviour:
   doorWithLever: {fileID: 0}
   isKey: 1
   Hjoint: {fileID: 0}
+  isNext: 0
 --- !u!54 &1761563247
 Rigidbody:
   m_ObjectHideFlags: 0

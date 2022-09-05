@@ -103,18 +103,6 @@ public class PlayerScript : MonoBehaviour
             }
             IsCoroutineRunning = false;
         }
-
-         void OnCollisionEnter(Collision col)
-        {
-            if (col.gameObject.CompareTag("Next"))
-            {
-                NextPhase(col.gameObject.name.ToString());
-            }
-        }
-        void NextPhase(string a)
-        {
-            SceneManager.LoadScene(a);
-        }
         void StaminaMarker()
         {   
             speed = 2;
