@@ -12,16 +12,13 @@ public class LightsScripts : MonoBehaviour
         {
 
             random = Random.Range(0, 101);
-            if (random <= 60)
-            {
+            if (random <= 60) {
                 anim[i].SetBool("isOn", true);
             }
-            else if (random > 60 && random <= 75)
-            {
+            else if (random > 60 && random <= 75) {
                 anim[i].SetBool("isOff", true);
             }
-            else
-            {
+            else {
                 anim[i].SetBool("isBlinking", true);
             }
         }

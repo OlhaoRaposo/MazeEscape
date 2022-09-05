@@ -16,12 +16,10 @@ public class InteractiveObject : MonoBehaviour
     public HingeJoint Hjoint;
     
     GameObject player;
-    private void Start()
-    {
+    private void Start() {
         //SetVars
         player = GameObject.Find("Player");
     }
-
     public void InteractDoor() {
         //Caso seja uma porta
         if (isDoor){
@@ -32,6 +30,7 @@ public class InteractiveObject : MonoBehaviour
                 if (doorIsLocked) {
                     if (player.GetComponent<PlayerScript>().keys > 0) {
                         player.GetComponent<PlayerScript>().keys -= 1;
+                        FindObjectOfType<AudioManager>().Play("Unlock");
                         if (!Hjoint.useMotor) {
                             Hjoint.useMotor = true;
                         }
@@ -60,7 +59,6 @@ public class InteractiveObject : MonoBehaviour
             }
         }
     }
-    
     public void InteractLever() {
         if (isLever){
             if (!Hjoint.useMotor) {
@@ -71,6 +69,7 @@ public class InteractiveObject : MonoBehaviour
             }
             doorWithLever.GetComponent<InteractiveObject>().InteractLeverDoor();
             //PlayLeverAudio
+            FindObjectOfType<AudioManager>().Play("Lever");
         }
     }
     public void InteractLeverDoor() {
@@ -86,7 +85,7 @@ public class InteractiveObject : MonoBehaviour
     }
     public void InteractKey() {
         player.GetComponent<PlayerScript>().keys += 1;
+        FindObjectOfType<AudioManager>().Play("Key");
         Destroy(this.gameObject);
     }
-
 }

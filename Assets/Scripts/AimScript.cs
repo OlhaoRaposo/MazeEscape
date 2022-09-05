@@ -9,6 +9,7 @@ public class AimScript : MonoBehaviour
     public float MouseSens = 100f;
     public float minAngle, MaxAngle;
     public Transform player;
+    public GameObject flashlight;
     public Text intText;
     
     
@@ -17,7 +18,7 @@ public class AimScript : MonoBehaviour
     private float distanceOfInteract = 4;
     private RaycastHit ray;
     private Vector3 rayVec;
-    
+    private bool isFlash = false;
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
@@ -33,7 +34,16 @@ public class AimScript : MonoBehaviour
         
         //Desenha um Ray do tamano do raycast
         Debug.DrawRay(Camera.main.transform.position,transform.forward*distanceOfInteract,Color.red);
-        
+        if (Input.GetKeyDown(KeyCode.F)) {
+            if (!isFlash) {
+                isFlash = true;
+                flashlight.gameObject.SetActive(true);
+            }
+            else if(isFlash) {
+                isFlash = false;
+                flashlight.gameObject.SetActive(false);
+            }
+        }
         rayVec = Camera.main.transform.position;
         if (Physics.Raycast(rayVec, transform.forward, out ray)) {
             if (ray.distance < distanceOfInteract ){
@@ -57,6 +67,7 @@ public class AimScript : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.X)) {
             Cursor.lockState = CursorLockMode.Locked;
         }
+        
     }
     void Interact(GameObject gmbj)
     {

@@ -1,7 +1,7 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = System.Random;
 
 public class PlayerScript : MonoBehaviour
 {
@@ -23,10 +23,13 @@ public class PlayerScript : MonoBehaviour
         private bool stamina = true;
         private bool canRun = true;
         Vector3 velocity;
+        private int rnd;
         private void Start() {
             FindObjectOfType<AudioManager>().Play("StaticSound");
         }
-        void Update() {
+        void Update()
+        {
+
             isGround = Physics.CheckSphere(groundCheck.position,groundDistance);
             if (isGround && velocity.y < 0)
             {
@@ -38,7 +41,6 @@ public class PlayerScript : MonoBehaviour
             Vector3 move = transform.right * x + transform.forward * z;
             cc.Move(move * speed * Time.deltaTime);
     
-           
             velocity.y += gravity * Time.deltaTime;
             cc.Move(velocity * Time.deltaTime);
 
@@ -64,7 +66,7 @@ public class PlayerScript : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.LeftShift) && stamina == true)
             {
-                if(!isRuning)
+                if(!isRuning) 
                     speed += 4;
                     canRun = false;
                     stamina = false;
@@ -77,8 +79,7 @@ public class PlayerScript : MonoBehaviour
                     speed = 2;
                 isRuning = false;
                 
-        }
-        Debug.Log(speed);
+            }
         }
         void CheckSound() {
             if(!IsCoroutineRunning) {
@@ -104,16 +105,35 @@ public class PlayerScript : MonoBehaviour
         void StaminaMarker()
         {   
             speed = 2;
-
             if (stamina == false && canRun == false)
-                {
-                    canRun = true;
-                    FindObjectOfType<AudioManager>().Play("Breathe");
-                    Invoke("StaminaMarker", 5f);
-                }
+            {
+                canRun = true;
+                FindObjectOfType<AudioManager>().Play("Breathe");
+                Invoke("StaminaMarker", 5f);
+            }
             if (canRun == true)
             {
                 stamina = true;
             }
         }
+
+        IEnumerator PlayAudio()
+        {
+            rnd = new Random().Next(0, 23);
+            int choice;
+
+            choice = new Random().Next(0, 8);
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            yield return new WaitForSeconds(rnd);
+        }
+        
 }

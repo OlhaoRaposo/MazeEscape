@@ -1,0 +1,143 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &434521077992234095
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 434521077992234093}
+  - component: {fileID: 434521077992234094}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &434521077992234093
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 434521077992234095}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 8.654791, y: 2.107372, z: 13.157747}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &434521077992234094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 434521077992234095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cba990896d4c5e41a9933234c81a61d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: Walk
+    Clip: {fileID: 8300000, guid: f8b9bd5e905304340ae690a75517e22f, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    Source: {fileID: 0}
+  - name: DoorOpening
+    Clip: {fileID: 8300000, guid: 1fe93b6556b38b84680a9f883ac1a6ac, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    Source: {fileID: 0}
+  - name: DoorLocked
+    Clip: {fileID: 8300000, guid: a86a01bc403b7e948aefb382380e3b72, type: 3}
+    volume: 0.545
+    pitch: 1.25
+    loop: 0
+    Source: {fileID: 0}
+  - name: StaticSound
+    Clip: {fileID: 8300000, guid: ab388a588afe5b74fac0889ecee2545c, type: 3}
+    volume: 0.545
+    pitch: 1.25
+    loop: 1
+    Source: {fileID: 0}
+  - name: BodyFalling
+    Clip: {fileID: 8300000, guid: 40610dbefcd70ad4ebae293bd9805c82, type: 3}
+    volume: 0.545
+    pitch: 1.25
+    loop: 0
+    Source: {fileID: 0}
+  - name: Breathe
+    Clip: {fileID: 8300000, guid: 3cb48157a3a78b748ab96daead1872b1, type: 3}
+    volume: 0.545
+    pitch: 1.25
+    loop: 0
+    Source: {fileID: 0}
+  - name: Key
+    Clip: {fileID: 8300000, guid: debc5f609333b9d4e9ebfff86bb13c1b, type: 3}
+    volume: 0.545
+    pitch: 1.25
+    loop: 0
+    Source: {fileID: 0}
+  - name: Lever
+    Clip: {fileID: 8300000, guid: 3ef031312ebc18d41bcacacf263d3bd9, type: 3}
+    volume: 0.545
+    pitch: 1.25
+    loop: 0
+    Source: {fileID: 0}
+  - name: Unlock
+    Clip: {fileID: 8300000, guid: a491d7e4ed1302d44b544e0864933f73, type: 3}
+    volume: 0.545
+    pitch: 1.25
+    loop: 0
+    Source: {fileID: 0}
+  - name: R1
+    Clip: {fileID: 8300000, guid: 61ac6bdd1ad01994f8170ef37c9ded9c, type: 3}
+    volume: 0.545
+    pitch: 1.25
+    loop: 0
+    Source: {fileID: 0}
+  - name: R2
+    Clip: {fileID: 8300000, guid: 9b1fc2dfcdf5b63479a9754a3963d0fc, type: 3}
+    volume: 0.545
+    pitch: 1.25
+    loop: 0
+    Source: {fileID: 0}
+  - name: R3
+    Clip: {fileID: 8300000, guid: f9c2f9d09da7d664788f1e3bb24417b3, type: 3}
+    volume: 0.545
+    pitch: 1.25
+    loop: 0
+    Source: {fileID: 0}
+  - name: R4
+    Clip: {fileID: 8300000, guid: c003a5bc1783bad4eb36dac67a88dc78, type: 3}
+    volume: 0.545
+    pitch: 1.25
+    loop: 0
+    Source: {fileID: 0}
+  - name: R5
+    Clip: {fileID: 8300000, guid: afbfceeced96cc14584b6970b31d7599, type: 3}
+    volume: 0.545
+    pitch: 1.25
+    loop: 0
+    Source: {fileID: 0}
+  - name: R6
+    Clip: {fileID: 8300000, guid: 597a4a95fb37bcc4388010638c5ca36e, type: 3}
+    volume: 0.545
+    pitch: 1.25
+    loop: 0
+    Source: {fileID: 0}
+  - name: R7
+    Clip: {fileID: 8300000, guid: 08f6b7b06a1d77044b7b3b3e04b30fe5, type: 3}
+    volume: 0.545
+    pitch: 1.25
+    loop: 0
+    Source: {fileID: 0}
