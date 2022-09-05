@@ -148,6 +148,7 @@ GameObject:
   - component: {fileID: 8698875503393983945}
   - component: {fileID: 8698875503393983942}
   - component: {fileID: 8698875503393983943}
+  - component: {fileID: 7055666374571656109}
   m_Layer: 0
   m_Name: "Porta/SMa\xE7aneta"
   m_TagString: InteractiveObject
@@ -286,3 +287,22 @@ HingeJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &7055666374571656109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6014359187205910806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5648f217bfa779d48954d929979a305b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isDoor: 1
+  doorIsLocked: 1
+  isDorLever: 1
+  isLever: 0
+  doorWithLever: {fileID: 0}
+  isKey: 0
+  Hjoint: {fileID: 8698875503393983943}

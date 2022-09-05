@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 7608979599263012166}
   - component: {fileID: 7091424044052010106}
   - component: {fileID: 7091424044052010105}
-  - component: {fileID: 7091424044052010104}
   - component: {fileID: 7091424044052010111}
+  - component: {fileID: 7091424044052010104}
   m_Layer: 0
   m_Name: Porta
   m_TagString: InteractiveObject
@@ -117,6 +117,25 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.96264887, y: 2.0599146, z: 0.118234634}
   m_Center: {x: -0.0024125576, y: 1.1261897, z: -0.046450615}
+--- !u!114 &7091424044052010111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 468116657880153801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5648f217bfa779d48954d929979a305b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isDoor: 1
+  doorIsLocked: 0
+  isDorLever: 0
+  isLever: 0
+  doorWithLever: {fileID: 0}
+  isKey: 0
+  Hjoint: {fileID: 7091424044052010104}
 --- !u!59 &7091424044052010104
 HingeJoint:
   m_ObjectHideFlags: 0
@@ -153,25 +172,6 @@ HingeJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
---- !u!114 &7091424044052010111
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 468116657880153801}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5648f217bfa779d48954d929979a305b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isDoor: 1
-  doorIsLocked: 0
-  isDorLever: 0
-  isLever: 0
-  doorWithLever: {fileID: 0}
-  isKey: 0
-  Hjoint: {fileID: 7091424044052010104}
 --- !u!1 &4548668202796049884
 GameObject:
   m_ObjectHideFlags: 0
