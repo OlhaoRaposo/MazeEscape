@@ -45,6 +45,7 @@ public class AimScript : MonoBehaviour
             }
         }
         rayVec = Camera.main.transform.position;
+        
         if (Physics.Raycast(rayVec, transform.forward, out ray)) {
             if (ray.distance < distanceOfInteract ){
                 if (ray.collider.gameObject.CompareTag("InteractiveObject")){
@@ -67,7 +68,6 @@ public class AimScript : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.X)) {
             Cursor.lockState = CursorLockMode.Locked;
         }
-        
     }
     void Interact(GameObject gmbj)
     {
@@ -82,9 +82,7 @@ public class AimScript : MonoBehaviour
             }
         }
     }
-    void NotInteract()
-    {
+    void NotInteract() {
         intText.enabled = false;
     }
-    
 }

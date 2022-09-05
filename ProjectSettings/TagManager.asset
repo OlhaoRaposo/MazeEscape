@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - InteractiveObject
+  - Next
   layers:
   - Default
   - TransparentFX

@@ -1,7 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Random = System.Random;
+using UnityEngine.SceneManagement;
 
 public class PlayerScript : MonoBehaviour
 {
@@ -26,10 +28,10 @@ public class PlayerScript : MonoBehaviour
         private int rnd;
         private void Start() {
             FindObjectOfType<AudioManager>().Play("StaticSound");
+            StartCoroutine("PlayAudio");
         }
         void Update()
         {
-
             isGround = Physics.CheckSphere(groundCheck.position,groundDistance);
             if (isGround && velocity.y < 0)
             {
@@ -102,6 +104,17 @@ public class PlayerScript : MonoBehaviour
             IsCoroutineRunning = false;
         }
 
+         void OnCollisionEnter(Collision col)
+        {
+            if (col.gameObject.CompareTag("Next"))
+            {
+                NextPhase(col.gameObject.name.ToString());
+            }
+        }
+        void NextPhase(string a)
+        {
+            SceneManager.LoadScene(a);
+        }
         void StaminaMarker()
         {   
             speed = 2;
@@ -119,21 +132,36 @@ public class PlayerScript : MonoBehaviour
 
         IEnumerator PlayAudio()
         {
-            rnd = new Random().Next(0, 23);
+            rnd = new Random().Next(20, 48);
             int choice;
-
+            
             choice = new Random().Next(0, 8);
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
+            switch (choice)
+            {
+                case 1 :
+                    FindObjectOfType<AudioManager>().Play("R1");
+                    break;
+                case 2 :
+                    FindObjectOfType<AudioManager>().Play("R2");
+                    break;
+                case 3 :
+                    FindObjectOfType<AudioManager>().Play("R3");
+                    break;
+                case 4 :
+                    FindObjectOfType<AudioManager>().Play("R4");
+                    break;
+                case 5 :
+                    FindObjectOfType<AudioManager>().Play("R5");
+                    break;
+                case 6 :
+                    FindObjectOfType<AudioManager>().Play("R6");
+                    break;
+                case 7 :
+                    FindObjectOfType<AudioManager>().Play("R7");
+                    break;
+            }
+            Debug.Log("ASIMDA");
             yield return new WaitForSeconds(rnd);
+            StartCoroutine("PlayAudio");
         }
-        
 }

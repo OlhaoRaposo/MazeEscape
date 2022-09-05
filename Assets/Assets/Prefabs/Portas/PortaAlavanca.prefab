@@ -12,6 +12,9 @@ GameObject:
   - component: {fileID: 1395381851126986216}
   - component: {fileID: 1395381851126986217}
   - component: {fileID: 1395381851126986219}
+  - component: {fileID: 7596638025466416234}
+  - component: {fileID: 5650883483164360953}
+  - component: {fileID: 3131075357034651605}
   m_Layer: 0
   m_Name: ParedePorta
   m_TagString: Untagged
@@ -101,6 +104,45 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!65 &7596638025466416234
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1395381851126986215}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.9476471, y: 2.3090239, z: 0.32647368}
+  m_Center: {x: -1.0250676, y: 1.155689, z: 0}
+--- !u!65 &5650883483164360953
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1395381851126986215}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.9405532, y: 2.2664604, z: 0.32647368}
+  m_Center: {x: 1.028615, y: 1.1344073, z: 0}
+--- !u!65 &3131075357034651605
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1395381851126986215}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.9977827, y: 0.7270851, z: 0.32647368}
+  m_Center: {x: 0.00000023841858, y: 2.634766, z: 0}
 --- !u!1 &1395381852638214409
 GameObject:
   m_ObjectHideFlags: 0

@@ -30,7 +30,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 468116657880153801}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.021, y: 0, z: 0.062}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -145,7 +145,7 @@ HingeJoint:
   m_GameObject: {fileID: 468116657880153801}
   m_ConnectedBody: {fileID: 5545338260809246050}
   m_ConnectedArticulationBody: {fileID: 0}
-  m_Anchor: {x: 0.5, y: 1, z: 0}
+  m_Anchor: {x: 0.47, y: 1, z: -0.05}
   m_Axis: {x: 0, y: 90, z: 0}
   m_AutoConfigureConnectedAnchor: 1
   m_ConnectedAnchor: {x: 0.5, y: 1, z: 0}
@@ -163,8 +163,8 @@ HingeJoint:
   m_Limits:
     min: 0
     max: 75
-    bounciness: 1
-    bounceMinVelocity: 0.2
+    bounciness: 0
+    bounceMinVelocity: 0
     contactDistance: 0
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
@@ -217,6 +217,9 @@ GameObject:
   - component: {fileID: 3461855002056772388}
   - component: {fileID: 2773644027932653857}
   - component: {fileID: 5545338260809246050}
+  - component: {fileID: 7885589550974636000}
+  - component: {fileID: 4614136804774014621}
+  - component: {fileID: 1662384367919428761}
   m_Layer: 0
   m_Name: ParedePorta
   m_TagString: Untagged
@@ -306,3 +309,42 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!65 &7885589550974636000
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5545338260809246051}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.0074197, y: 2.2525423, z: 0.32647368}
+  m_Center: {x: 0.99518174, y: 1.1274482, z: 0}
+--- !u!65 &4614136804774014621
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5545338260809246051}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.9845322, y: 2.255469, z: 0.32647368}
+  m_Center: {x: -1.006625, y: 1.1289116, z: 0}
+--- !u!65 &1662384367919428761
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5545338260809246051}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.9977827, y: 0.77979326, z: 0.32647368}
+  m_Center: {x: 0.00000023841858, y: 2.608412, z: 0}
